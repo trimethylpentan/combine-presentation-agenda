@@ -1,6 +1,7 @@
 #include "ImageMerger.h"
 
 #include <iostream>
+#include <fstream>
 #include <string>
 
 using namespace std;
@@ -15,10 +16,12 @@ ImageMerger::~ImageMerger() {
 }
 
 void ImageMerger::MergeImages(string path) {
-	string indexFilename = path + "../index.txt";
+	string indexFilename = path + "/../index.txt";
 
 	ifstream infile(indexFilename);
-	while() {
-
+	string line;
+	while(getline(infile, line)) {
+		cout << line;
+		this->chapters.push_front(line);
 	}
 }
