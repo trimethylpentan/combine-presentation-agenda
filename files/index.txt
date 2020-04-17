@@ -1,6 +1,6 @@
 start.png
+planung.png
+analyse.png
 implementierung.png
-fazit.png
-start.png
-implementierung.png
+deployment.png
 fazit.png

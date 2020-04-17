@@ -46,9 +46,9 @@ void ImageMerger::MergeImages(string path) {
 		for(const string currentChapter : chapters) {
 			Mat3b image;
 			if (currentChapter == chapter) {
-				 image = imread(directoryName + "/img/punkt_orange.png");
+				 image = imread(directoryName + "/img/point_highlight.png");
 			} else {
-				image = imread(directoryName + "/img/punkt_weiß.png");
+				image = imread(directoryName + "/img/point_neutral.png");
 			}
 			Mat icon = imread(directoryName + "/img/" + currentChapter, IMREAD_UNCHANGED);
 			OverlayImage(image, icon, image, Point((image.cols / 2) - (icon.cols / 2), (image.rows / 2) - (icon.rows / 2)));
