@@ -1,9 +1,13 @@
 cmake_minimum_required (VERSION 3.10)
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_COMPILER /usr/bin/g++-8)
 
 project (combine-presentation-agenda)
 
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
 add_executable(combine-presentation-agenda combine-presentation-agenda.cpp ImageMerger.cpp)
+target_link_libraries( combine-presentation-agenda ${OpenCV_LIBS} stdc++)
 
 file(GLOB meta_files RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "files/*.*")
 
