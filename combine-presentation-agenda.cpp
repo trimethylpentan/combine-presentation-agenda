@@ -1,6 +1,6 @@
 #include <string>
 
-#include "ImageMerger.h"
+#include "src/ImageMerger.h"
 
 using namespace std;
 
