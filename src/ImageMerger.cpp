@@ -69,7 +69,7 @@ void ImageMerger::MergeImages(string path) {
 	}
 }
 
-//Quelle: http://jepsonsblog.blogspot.com/2012/10/overlay-transparent-image-in-opencv.html
+// Source: http://jepsonsblog.blogspot.com/2012/10/overlay-transparent-image-in-opencv.html
 void ImageMerger::OverlayImage(const cv::Mat &background, const cv::Mat &foreground, cv::Mat &output, cv::Point2i location) {
   background.copyTo(output);
 
